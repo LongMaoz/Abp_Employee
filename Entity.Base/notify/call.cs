@@ -6,7 +6,6 @@ namespace Entity.Base
 {
     public class CallTTSContent
     {
-        //"aliyun:TTS_145585715 tencent template:384609";
 
         /// <summary>
         /// 被叫号码 必填
