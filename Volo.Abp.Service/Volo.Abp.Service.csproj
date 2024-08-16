@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Remove="E:\NuGet\cache\volo.abp.aspnetcore\8.2.0\contentFiles\any\net8.0\Volo.Abp.AspNetCore.abppkg.analyze.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Proxies" Version="8.0.4" />
+    <PackageReference Include="nacos-sdk-csharp.AspNetCore" Version="1.3.7" />
+    <PackageReference Include="nacos-sdk-csharp.Extensions.Configuration" Version="1.3.7" />
+    <PackageReference Include="nacos-sdk-csharp.YamlParser" Version="1.3.7" />
+    <PackageReference Include="Volo.Abp.AspNetCore" Version="8.2.0" />
+    <PackageReference Include="Volo.Abp.AspNetCore.Mvc" Version="8.2.0" />
+    <PackageReference Include="Volo.Abp.Autofac" Version="8.2.0" />
+    <PackageReference Include="Volo.Abp.AutoMapper" Version="8.2.0" />
+    <PackageReference Include="Volo.Abp.Core" Version="8.2.0" />
+    <PackageReference Include="Volo.Abp.Ddd.Application" Version="8.2.0" />
+    <PackageReference Include="Volo.Abp.Ddd.Domain" Version="8.2.0" />
+    <PackageReference Include="Volo.Abp.EntityFrameworkCore.MySQL" Version="8.2.0" />
+    <PackageReference Include="Volo.Abp.Validation" Version="8.2.0" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,65 @@
+syntax = "proto3";
+
+package registration;
+
+import "google/protobuf/any.proto";
+import "google/protobuf/empty.proto";
+import "google/protobuf/struct.proto";
+import "google/protobuf/wrappers.proto";
+
+enum ApplyStatus {
+    pending = 0;
+    approved = 1;
+    rejected = 2;
+}
+
+message Apply {
+    int32 id = 1;
+    string createTime = 2;
+    string updateTime = 3;
+    string approvedTime = 4;
+    string rejectedTime = 5;
+    int64 userId = 6;
+    int32 productId = 7;
+    string serialNo = 8;
+    string purchaseTime = 9;
+    string closeUpImage = 10;
+    string serialNoImage = 11;
+    string receiptImage = 12;
+    string registrationNo = 13;
+    string officialWarrantyTime = 14;
+    string extendedWarrantyTime = 15;
+    ApplyStatus status = 16;
+    string cautions = 17;
+    string objections = 18;
+    string remark = 19;
+}
+
+message AppliesByIds {
+    repeated int32 ids = 1;
+}
+
+message AppliesByUser {
+    int64 userId = 1;
+    string status = 2;
+    int32 skip = 3;
+    int32 limit = 4;
+}
+
+message AppliesByProduct {
+    int32 productId = 1;
+    string status = 2;
+    int32 skip = 3;
+    int32 limit = 4;
+}
+
+message AppliesResult {
+    int32 total = 1;
+    repeated Apply items = 2;
+}
+
+service ApplyService {
+    rpc GetAppliesByIds (AppliesByIds) returns (AppliesResult) {}
+    rpc GetAppliesByUser (AppliesByUser) returns (AppliesResult) {}
+    rpc GetAppliesByProduct (AppliesByProduct) returns (AppliesResult) {}
+}

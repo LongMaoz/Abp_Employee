@@ -1,0 +1,93 @@
+syntax = "proto3";
+
+package controller;
+
+service LogisticsController {
+    rpc booking (BookingRequest) returns (BookingResponse) {}
+    rpc subscribe (SubscribeRequest) returns (SubscribeResponse) {}
+    rpc findImmediatelyTraces (FindImmediatelyTracesRequest) returns (FindImmediatelyTracesResponse) {}
+}
+
+message FindImmediatelyTracesRequest {
+    string logisticCode = 1; // 物流单号
+    string phoneTail = 2; // 收/寄件人手机尾号 顺丰快递必填
+}
+
+message FindImmediatelyTracesResponse {
+    string status = 1; // 物流状态: 0-无轨迹，1-已揽收，2-在途中，3-签收,4-问题件
+    string shipperName = 2; // 物流公司名称
+    repeated Trace traces = 3; // 物流轨迹列表
+}
+
+message AddressDetail {
+    string name = 1;
+    string mobile = 2;
+    string provinceName = 3;
+    string cityName = 4;
+    string expAreaName = 5;
+    string address = 6;
+}
+
+message Goods {
+    string goodsName = 1;
+    string goodsQuantity = 2;
+}
+
+message BookingRequest {
+    int32 userId = 1;
+    string shipperCode = 2;
+    AddressDetail sender = 3;
+    AddressDetail receiver = 4;
+    repeated Goods commodity = 5;
+    int32 transportType = 6;
+    int32 payType = 7;
+    int32 quantity = 8;
+    string remark = 9;
+    int32 insure = 10;
+    string templateSize = 11;
+    string orderCode = 12;
+    string thrOrderCode = 13;
+    int32 direction = 14;
+    string monthCode = 15;
+    string expType = 16;
+}
+
+message Trace {
+    string context = 1;
+    string time = 2;
+}
+
+message BookingResponse {
+    string logisticCode = 1;
+    repeated string printTemplate = 2;
+}
+
+message SubscribeRequest {
+    string userId = 1;
+    string logisticCode = 2;
+    AddressDetail sendAddress = 3;
+    AddressDetail receiveAddress = 4;
+    int32 payType = 5;
+    string orderCode = 6;
+    int32 direction = 7;
+    string shipperCode = 8;
+    double fee = 9;
+}
+
+message SubscribeResponse {
+    string id = 1;
+    int32 userId = 2;
+    string deliverTime = 3;
+    string receiveTime = 4;
+    int32 fee = 5;
+    int32 payType = 6;
+    string status = 7;
+    string logisticCode = 8;
+    string shipperCode = 9;
+    string shipperName = 10;
+    string orderCode = 11;
+    AddressDetail sender = 12;
+    AddressDetail receiver = 13;
+    int32 direction = 14;
+    repeated Trace traces = 15;
+}

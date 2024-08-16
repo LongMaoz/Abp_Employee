@@ -1,0 +1,56 @@
+syntax = "proto3";
+
+option csharp_namespace = "WareHouse.GrpcServer";
+
+package Store;
+
+service StoreApp {
+  rpc GetStoreByIds (StoreInfoRequest) returns (StoreListResult) {};
+  rpc GetAllStore (StoreListRequest) returns (StoreListResult) {};
+  rpc GetUserStore (StoreUserRequest) returns (StoreListResult) {};
+  rpc GetStoreByAddr (StoreByAddrRequest) returns (StoreListResult) {};
+}
+message StoreByAddrRequest{
+	string Province=1;
+	string City=2;
+	string District=3;
+	string Street=4;
+}
+message StoreInfoRequest {
+ repeated int32 ids = 1;
+ int32 isScene=2;  //0 不获取场景  1获取场景
+}
+message StoreResult {
+ int32 ID=1;
+ string Name=2;
+ string Phone=3;
+ string Province=4;
+ string City=5;
+ string District=6;
+ string Street=7;
+ string Person=8;
+ string Remark=9;
+ int32  GroupID=10;
+ string UserName=11;
+ string StartTime=12;
+ string EndTime=13;
+ string MonthCode=14;
+ string SceneType=15;
+ repeated StoreSceneResult Scene=16;
+ string BusType=17;
+}
+message StoreSceneResult{
+ int32 StoreID=1;
+ int32 SceneID=2;
+ string SceneName=3;
+}
+message StoreListRequest {
+ string Scene=1;
+}
+message StoreUserRequest {
+ int32 UserId=1;
+}
+message StoreListResult {
+ int32 total=1;
+ repeated StoreResult Data=2;
+}

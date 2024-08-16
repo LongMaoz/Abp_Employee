@@ -1,0 +1,29 @@
+﻿syntax = "proto3";
+
+option csharp_namespace = "GrpcService.Notify";
+
+package email;
+service EmailSender {
+  rpc SendEmail (EmailSimpleRequest) returns (EmailSendResult);
+  rpc SendEmailByTemplate(EmailTemplateRequest) returns (EmailSendResult);
+  rpc SendBatchEmailByTemplate(EmailBatchTemplateRequest) returns (EmailSendResult);
+}
+message EmailSimpleRequest{
+   string ToAddress=1;//收件人地址 多个 email 地址可以用逗号分隔，最多100个地址
+   string Subject=2;
+   string HtmlBody=3;
+   string Remark=4;
+}
+message EmailBatchTemplateRequest{
+repeated EmailTemplateRequest Request=1;
+}
+message EmailTemplateRequest{
+   int32 TemplateId=1;
+   string Subject=2;
+   string ToAddress=3;//收件人地址 多个 email 地址可以用逗号分隔，最多100个地址
+   map<string, string> TemplateParam=4;
+   string Remark=5;
+}
+message EmailSendResult{
+  bool Result=1;
+}

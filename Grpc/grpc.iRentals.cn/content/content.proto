@@ -1,0 +1,36 @@
+syntax = "proto3";
+
+option csharp_namespace = "IRentals.Community.GrpcServer";
+
+package Content;
+
+// The greeting service definition.
+service Contenter {
+  // Sends a greeting
+  rpc GetContentByIds (ContentRequest) returns (ContentResponse) {}
+  rpc GetContentByProductIds(ProductRequest) returns (ProductContentResponse){}
+}
+
+// The request message containing the user's name.
+message ContentRequest {
+ repeated int32 ids=1;
+}
+message ContentResponse {
+ int32 total=1;
+ repeated ContentResult data=2;
+}
+// The response message containing the greetings.
+message ContentResult {
+ int32 id=1;
+ string title = 2;
+ string content=3;
+ string introduce=4;
+ string authorId=5;
+}
+
+message ProductRequest{
+ int32 productId=1;
+}
+message ProductContentResponse{
+ int32 total=1;
+}

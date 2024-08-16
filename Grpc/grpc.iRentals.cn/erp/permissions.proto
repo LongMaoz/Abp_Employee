@@ -1,0 +1,262 @@
+syntax = "proto3";
+
+package erp.permissions;
+
+import "google/protobuf/any.proto";
+import "google/protobuf/empty.proto";
+import "google/protobuf/wrappers.proto";
+
+message EmptyRequest {
+
+}
+
+
+// --- 员工接口 START ---
+
+message Employee {
+    int32 id = 1;
+    string createTime = 2;
+    string updateTime = 3;
+    string name = 4;
+    string displayName = 5;
+    string email = 6;
+    string phoneNumber = 7;
+    string avatar = 8;
+    string status = 9;
+    EmployeeGroupsResult groups = 10;
+    RolesResult roles = 11;
+}
+
+message EmployeeSimple {
+    int32 id = 1;
+    string createTime = 2;
+    string updateTime = 3;
+    string name = 4;
+    string displayName = 5;
+    string email = 6;
+    string phoneNumber = 7;
+    string avatar = 8;
+    string status = 9;
+}
+
+message EmployeeProfile {
+    int32 id = 1;
+    string name = 2;
+    string displayName = 3;
+    string email = 4;
+    string phoneNumber = 5;
+    string avatar = 6;
+    string status = 7;
+}
+
+message ChangePasswordRequest {
+    int32 id = 1;
+    string oldPassword = 2;
+    string newPassword = 3;
+}
+
+message ResetPasswordByEmailRequest {
+    string email = 1;
+    string verificationCode = 2;
+    string password = 3;
+}
+
+message ResetPasswordByPhoneNumberRequest {
+    string phoneNumber = 1;
+    string verificationCode = 2;
+    string password = 3;
+}
+
+message EmployeeById {
+    int32 id = 1;
+}
+
+message EmployeesByIds {
+    repeated int32 ids = 1;
+}
+
+message ListEmployeesRequest {
+    int32 offset = 1;
+    int32 limit = 2;
+}
+
+message SearchEmployeesRequest {
+    int32 groupId = 1;
+    int32 roleId = 2;
+    string status = 3;
+    string keyword = 4;
+    int32 offset = 5;
+    int32 limit = 6;
+}
+
+message GroupAssociationRequest {
+    int32 employeeId = 1;
+    repeated int32 employeeGroupIds = 2;
+}
+
+message EmployeesResult {
+    int32 total = 1;
+    repeated Employee data = 2;
+}
+
+message EmployeesSimpleResult {
+    int32 total = 1;
+    repeated EmployeeSimple data = 2;
+}
+
+service EmployeesService {
+    rpc CreateEmployee (Employee) returns (Employee) {}
+    rpc UpdateEmployee (EmployeeProfile) returns (Employee) {}
+    rpc ChangePassword (ChangePasswordRequest) returns (google.protobuf.Empty) {}
+    rpc ForgetPasswordByEmail (google.protobuf.StringValue) returns (google.protobuf.Empty) {}
+    rpc ResetPasswordByEmail (ResetPasswordByEmailRequest) returns (google.protobuf.Empty) {}
+    rpc ForgetPasswordByPhoneNumber (google.protobuf.StringValue) returns (google.protobuf.Empty) {}
+    rpc ResetPasswordByPhoneNumber (ResetPasswordByPhoneNumberRequest) returns (google.protobuf.Empty) {}
+    rpc DestroyEmployee (EmployeeById) returns (google.protobuf.Empty) {}
+    rpc GetEmployeeById (EmployeeById) returns (Employee) {}
+    rpc GetSimpleEmployeesByIds (EmployeesByIds) returns (EmployeesSimpleResult) {}
+    rpc GetEmployeesByIds (EmployeesByIds) returns (EmployeesResult) {}
+    rpc ListEmployees (ListEmployeesRequest) returns (EmployeesResult) {}
+    rpc SearchEmployees (SearchEmployeesRequest) returns (EmployeesResult) {}
+    rpc SearchSimpleEmployees (SearchEmployeesRequest) returns (EmployeesSimpleResult) {}
+    rpc JoinGroups (GroupAssociationRequest) returns (google.protobuf.Empty) {}
+    rpc LeaveGroups (GroupAssociationRequest) returns (google.protobuf.Empty) {}
+    rpc GetGroupsById (EmployeeById) returns (EmployeeGroupsSimpleResult) {}
+}
+
+// --- 员工接口 END ---
+
+// --- 员工组接口 START ---
+
+message EmployeeGroup {
+    int32 id = 1;
+    string createTime = 2;
+    string updateTime = 3;
+    string name = 4;
+    string description = 5;
+    EmployeesResult employees = 6;    
+}
+
+message EmployeeGroupSimple {
+    int32 id = 1;
+    string createTime = 2;
+    string updateTime = 3;
+    string name = 4;
+    string description = 5;
+}
+
+message EmployeeGroupById {
+    int32 id = 1;
+}
+
+message EmployeeGroupsByIds {
+    repeated int32 ids = 1;
+}
+
+message ListEmployeeGroupsRequest {
+    int32 offset = 1;
+    int32 limit = 2;
+}
+
+message SearchEmployeeGroupsRequest {
+    string keyword = 1;
+    int32 offset = 2;
+    int32 limit = 3;
+}
+
+message EmployeeGroupsResult {
+    int32 total = 1;
+    repeated EmployeeGroup data = 2;
+}
+
+message EmployeeGroupsSimpleResult {
+    int32 total = 1;
+    repeated EmployeeGroupSimple data = 2;
+}
+
+service EmployeeGroupsService {
+    rpc CreateGroup (EmployeeGroup) returns (EmployeeGroup) {}
+    rpc UpdateGroup (EmployeeGroup) returns (EmployeeGroup) {}
+    rpc DestroyGroup (EmployeeGroupById) returns (google.protobuf.Empty) {}
+    rpc GetGroupById (EmployeeGroupById) returns (EmployeeGroup) {}
+    rpc GetSimpleGroupsByIds (EmployeeGroupsByIds) returns (EmployeeGroupsSimpleResult) {}
+    rpc GetGroupsByIds (EmployeeGroupsByIds) returns (EmployeeGroupsResult) {}
+    rpc GetAllGroups (EmptyRequest) returns (EmployeeGroupsResult) {}
+    rpc ListGroups (ListEmployeeGroupsRequest) returns (EmployeeGroupsResult) {}
+    rpc SearchGroups (SearchEmployeeGroupsRequest) returns (EmployeeGroupsResult) {}
+}
+   
+// --- 员工组接口 END ---
+
+// --- 角色接口 START ---
+
+message Role {
+    int32 id = 1;
+    string createTime = 2;
+    string updateTime = 3;
+    string name = 4;
+    string description = 5;
+}
+
+message RoleById {
+    int32 id = 1;
+}
+
+message RolesByIds {
+    repeated int32 ids = 1;
+}
+
+message ListRolesRequest {
+    int32 offset = 1;
+    int32 limit = 2;
+}
+
+message SearchRolesRequest {
+    string keyword = 1;
+    int32 offset = 2;
+    int32 limit = 3;
+}
+
+message GrantPermissionsToRoleRequest {
+    int32 roleId = 1;
+    repeated string permissions = 2;
+}
+
+message GrantRolesToEmployeeRequest {
+    int32 employeeId = 1;
+    repeated int32 roleIds = 2;
+}
+
+message RolesResult {
+    int32 total = 1;
+    repeated Role data = 2;
+}
+
+message PermissionsResult {
+    int32 total = 1;
+    repeated string data = 2;
+}
+
+message GrantResult {
+    int32 total = 1;
+    repeated bool data = 2;
+}
+
+service RolesService {
+    rpc CreateRole (Role) returns (Role) {}
+    rpc UpdateRole (Role) returns (Role) {}
+    rpc DestroyRole (RoleById) returns (google.protobuf.Empty) {}
+    rpc GetRoleById (RoleById) returns (Role) {}
+    rpc GetRolesByIds (RolesByIds) returns (RolesResult) {}
+    rpc GetAllRoles (EmptyRequest) returns (RolesResult) {}
+    rpc ListRoles (ListRolesRequest) returns (RolesResult) {}
+    rpc SearchRoles (SearchRolesRequest) returns (RolesResult) {}
+    rpc GetRolePermissions (RoleById) returns (PermissionsResult) {}
+    rpc GrantPermissionsToRole (GrantPermissionsToRoleRequest) returns (GrantResult) {}
+    rpc GetRolesForEmployee (EmployeeById) returns (RolesResult) {}
+    rpc GrantRolesToEmployee (GrantRolesToEmployeeRequest) returns (GrantResult) {}
+    rpc GetEmployeePermissions (EmployeeById) returns (PermissionsResult) {}
+    rpc GetEmployeesForRole (RoleById) returns (EmployeesResult) {}
+}
+
+// --- 角色接口 END ---

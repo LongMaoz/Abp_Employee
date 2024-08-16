@@ -1,0 +1,149 @@
+syntax = "proto3";
+
+package hosting;
+
+import "google/protobuf/any.proto";
+import "google/protobuf/empty.proto";
+import "google/protobuf/struct.proto";
+import "google/protobuf/wrappers.proto";
+
+// --- 托管接口 START ---
+
+service ApplyService {
+    rpc StatisticsByUser (StatisticsByUserRequest) returns (StatisticsByUserResult) {}
+    rpc FindById (ApplyById) returns (AppliesResult) {}
+    rpc FindByIds (ApplyByIds) returns (AppliesResult) {}
+    rpc FindByEquipmentId (ApplyByEquipmentId) returns (AppliesResult) {}
+}
+
+message StatisticsByUserRequest {
+    string userId = 1; // 用户id
+}
+
+message StatisticsByUserResult {
+    int32 onsaleEquipmentNum = 1; // 托管中器材数
+    int32 allEquipmentNum = 2; // 累计托管器材数
+    double deduction = 3; // 托管抵扣
+}
+
+message Apply {
+    int32 id = 1; // 申请id
+    string createTime = 2; // 创建时间
+    string updateTime = 3; // 最近更新时间
+    int64 userId = 4; // 客户id
+    int32 productId = 5; // 型号id
+    string description = 6; // 设备描述
+    string isChineseVersion = 7; // 是否国行
+    string isUnderWarranty = 8; // 是否在保
+    string altogetherImage = 9; // 全家福图片
+    string closeUpImage = 10; // 特写图片
+    string serialNoImage = 11; // 序列号图片
+    int32 equipmentId = 12; // 器材id
+    string equipmentStatus = 13; // 器材状态
+    string equipmentUniqueCode = 14; // 器材唯一码
+    string equipmentSerialNo = 15; // 器材序列号
+    string serialNo = 16; // 序列号
+    int32 warehouseId = 17; // 器材送检仓库id
+    int32 equipmentWarehouseId = 18; // 器材上新仓库id
+    int32 curWarehouseId = 19; // 器材当前所在仓库id
+    repeated string checkImages = 20; // 检测图片数组
+    repeated ApplyAccessory applyAccessories = 21; // 检测图片数组
+    string contractSignedTime = 22; // 合同签署时间
+    string onsaleTime = 23; // 上架时间
+    string unsaleTime = 24; // 下架时间
+    string status = 25; // 申请状态
+    string purchaseReceiptImage = 26; // 购买凭证图片
+    string warrantyImage = 27; // 保修卡图片
+}
+
+message ApplyAccessory {
+    int32 accessoryId = 1; // 配件id
+    string accessoryName = 2; // 配件名称
+    int32 count = 3; // 数量
+}
+
+message AppliesResult {
+    int32 total = 1;
+    repeated Apply items = 2;
+}
+
+message ApplyById {
+    int32 id = 1; // 申请id
+}
+
+message ApplyByIds {
+    repeated int32 ids = 1; // 申请id
+}
+
+message ApplyByEquipmentId {
+    int32 equipmentId = 1; // 器材id
+}
+
+service UnsaleService {
+    rpc FindPreUnsaleEquipment (FindPreUnsaleEquipmentRequest) returns (FindPreUnsaleEquipmentResult) {}
+}
+
+message FindPreUnsaleEquipmentRequest {
+    int32 productId = 1; // 型号id
+}
+
+message FindPreUnsaleEquipmentResult {
+    repeated int32 equipmentIds = 1; // 器材id数组
+}
+
+service CouponService {
+    // 兑换托管券
+    rpc ExchangeCoupon (ExchangeCouponRequest) returns (ExchangeCouponResult) {}
+    // 获取用户托管券
+    rpc FindCouponByUser (FindCouponByUserRequest) returns (FindCouponByUserResult) {}
+    // 统计用户托管券
+    rpc CountCouponByUser (CountCouponByUserRequest) returns (CountCouponByUserResult) {}
+    // 托管券有效期
+    rpc GetCouponExpiration (google.protobuf.Empty) returns (google.protobuf.Int64Value) {}
+}
+
+message Coupon {
+    int32 id = 1; // 托管券id
+    string userId = 2; // 用户id
+    string exchangeWay = 3; // 兑换方式 give-定向派券,credit-积分兑换,cash-现金,mix-积分加现金,lottery-抽奖
+    string status = 4; // 托管券状态 unused-未使用,used-已使用,expired-已过期,invalid-已失效
+    string type = 5; // 类型 rare-稀有,common-普通
+    string createTime = 6; // 创建时间
+    string useTime = 7; // 使用时间
+    string deadline = 8; // 过期时间
+}
+
+message FindCouponByUserRequest {
+    string userId = 1; // 用户id
+    repeated string statusArr = 2; // 托管券状态数组 unused-未使用,used-已使用,expired-已过期,invalid-已失效
+    repeated string exchangeWays = 3; // 兑换方式数组 give-定向派券,credit-积分兑换,cash-现金,mix-积分加现金,lottery-抽奖
+}
+
+message FindCouponByUserResult {
+    repeated Coupon list = 1; // 托管券列表
+}
+
+message CountCouponByUserRequest {
+    string userId = 1; // 用户id
+    repeated string exchangeWays = 2; // 兑换方式数组 give-定向派券,credit-积分兑换,cash-现金,mix-积分加现金,lottery-抽奖
+}
+
+message CountCouponByUserResult {
+    int32 unusedTotal = 1; // 未使用数
+    int32 usedTotal = 2; // 已使用数
+    int32 expiredTotal = 3; // 已过期数
+    int32 invalidTotal = 4; // 已失效数
+}
+
+
+message ExchangeCouponRequest {
+    repeated string userIds = 1; // 用户id数组
+    string exchangeWay = 2; // 兑换方式 give-定向派券,credit-积分兑换,cash-现金,mix-积分加现金,lottery-抽奖,newer-新人福利
+    string type = 3; // 券类型 稀有-rare 普通-common
+}
+
+message ExchangeCouponResult {
+    bool success = 1; // 是否成功
+}
+
+// --- 托管接口 END ---

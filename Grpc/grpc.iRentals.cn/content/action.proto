@@ -1,0 +1,18 @@
+syntax = "proto3";
+option csharp_namespace = "IRentals.Community.GrpcServer";
+package Action;
+service Actioner {
+  rpc GetActionByIds (ActionRequest) returns (ActionResponse) {}
+}
+message ActionRequest {
+ repeated int32 ids=1;
+}
+message ActionResponse {
+ int32 total=1;
+ repeated ActionResult data=2;
+}
+message ActionResult {
+ int32 id=1;
+ string content=2;
+ string userId=3;
+}

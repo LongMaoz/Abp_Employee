@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+option csharp_namespace = "WareHouse.GrpcServer";
+
+package StoreRoute;
+
+service StoreRouteApp {
+  rpc GetRouteByAddress (StoreRouteRequest) returns (StoreRouteItems) {};
+}
+
+message StoreRouteRequest {
+  repeated int32 StoreId = 1;
+  string Province=2;
+  string City=3;
+}
+message StoreRouteItems{
+ int32 Total=1;
+ repeated Route Items=2;
+}
+message Route {
+  int32 StoreID=1;
+  string StoreName =2;
+  int32 FasterDay  =3;
+  int32 SlowerDay =4;
+  string Province =5;
+  string City =6;
+}

@@ -1,0 +1,43 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Proto\ding.proto" />
+    <None Remove="Proto\email.proto" />
+    <None Remove="Proto\sms.proto" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Feather.Polly.Strategy" Version="1.0.1" />
+    <PackageReference Include="Google.Protobuf" Version="3.28.0-rc1" />
+    <PackageReference Include="Grpc.Net.Client" Version="2.65.0" />
+    <PackageReference Include="Grpc.Net.ClientFactory" Version="2.49.0" />
+    <PackageReference Include="Grpc.Tools" Version="2.65.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Volo.Abp.Service\Volo.Abp.Service.csproj" />
+    <ProjectReference Include="..\Config\Config.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Grpc\" />
+    <Folder Include="IGrpc\" />
+    <Folder Include="Model\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Protobuf Include="Proto\ding.proto" GrpcServices="Client" />
+    <Protobuf Include="Proto\email.proto" GrpcServices="Client" />
+    <Protobuf Include="Proto\sms.proto" GrpcServices="Client" />
+  </ItemGroup>
+
+</Project>

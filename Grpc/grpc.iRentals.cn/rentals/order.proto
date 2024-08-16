@@ -1,0 +1,188 @@
+syntax = "proto3";
+
+import "google/protobuf/wrappers.proto";
+
+option csharp_namespace = "IRentals.Rentals.OrderingService";
+
+package rentals.order;
+
+message Address {
+	string name = 1;
+	string phoneNumber = 2;
+	string province = 3;
+	string city = 4;
+	string district = 5;
+	string street = 6;
+}
+
+message Order {
+	int64 id = 1;
+	string creationTime = 2;
+	string lastModificationTime = 3;
+	google.protobuf.Int64Value trialId = 4;
+	int64 userId = 5;
+	int64 storeId = 6;
+	string deliveryWay = 7;
+	Address senderAddress = 8;
+	Address receiverAddress = 9;
+	string deliveryTime = 10;
+	string customerExpectedReceivedTime = 11;
+	string customerReceivedTime = 12;
+	string customerExpectedSentTime = 13;
+	string customerSentTime = 14;
+	string expectedReceivedTime = 15;
+	string receivedTime = 16;
+	string closedTime = 17;
+	string completedTime = 18;
+	double deposit = 19;
+	double credit = 20;
+	double amount = 21;
+	double discount = 22;
+	double insurance = 23;
+	double damage = 24;
+	string status = 25;
+	string satisfaction = 26;//invalid use
+	repeated OrderDetail details=27;
+}
+
+message OrderDetail {
+	int64 id = 1;
+	string creationTime = 2;
+	string lastModificationTime = 3;
+	int64 userId = 4;
+	int64 orderId = 5;
+	int32 equipmentId = 6;
+	google.protobuf.Int64Value equipmentOwnerId = 7;
+	string equipmentUniqueCode = 8;
+	int32 productId = 9;
+	string productName = 10;
+	repeated string productImages = 11;
+	string deliveryTime = 12;
+	string customerReceivedTime = 13;
+	string customerSentTime = 14;
+	string receivedTime = 15;
+	double deposit = 16;
+	double amount = 17;
+	double discount = 18;
+	double insurance = 19;
+	double damage = 20;
+	double income = 21;
+	repeated OrderDetailAccessory accessories = 22;
+	string remark = 23;
+	string status = 24;
+}
+
+message OrderDetailAccessory {
+	string name = 1;
+	int32 qty = 2;
+}
+
+message OrdersSummaryByUser {
+	int64 userId = 1;
+	Order latestCompletedOrder = 2;
+	int32 completedOrdersCount = 3;
+	double completedOrdersTotalRent = 4;
+	double completedOrdersAvgRent = 5;
+	int32 closedOrdersCount = 6;
+	int32 servicingOrdersCount = 7;
+	string avgSatisfaction = 8;
+}
+
+message GetRequest {
+	int64 id = 1;
+	google.protobuf.BoolValue is_satisfaction = 2;
+	google.protobuf.BoolValue is_sendAddr = 3;
+	google.protobuf.BoolValue is_equipments = 4;
+}
+
+message GetResponse {
+	Order order = 1;
+}
+
+message GetListByIdsRequest {
+	repeated int64 ids = 1;
+	google.protobuf.BoolValue is_satisfaction = 2;
+	google.protobuf.BoolValue is_sendAddr = 3;
+	google.protobuf.BoolValue is_equipments = 4;
+}
+message GetListByIdsResponse {
+	repeated Order orders = 1;
+}
+
+message GetListByUserIdRequest {
+	int64 userId = 1;
+	repeated string statuses = 2;
+	google.protobuf.BoolValue is_satisfaction = 3;
+	google.protobuf.BoolValue is_sendAddr = 4;
+	google.protobuf.BoolValue is_equipments = 5;
+}
+message GetListByUserIdResponse {
+	repeated Order orders = 1;
+}
+
+message SummarizeByUserRequest {
+	int64 userId = 1;
+	google.protobuf.BoolValue is_satisfaction = 2;
+	google.protobuf.BoolValue is_sendAddr = 3;
+}
+
+message SummarizeByUserResponse {
+	OrdersSummaryByUser summary = 1;
+}
+
+message SummarizeByUsersRequest {
+	repeated int64 userIds = 1;
+	google.protobuf.BoolValue is_satisfaction = 2;
+	google.protobuf.BoolValue is_sendAddr = 3;
+}
+
+message SummarizeByUsersResponse {
+	repeated OrdersSummaryByUser summaries = 1;
+}
+
+message SummarizeByEquipmentCondition {
+	int32 equipmentId = 1;
+	repeated string statuses = 2;
+	string createStartTime = 3;
+	string createEndTime = 4;
+	string deliveryStartTime = 5;
+	string deliveryEndTime = 6;
+}
+
+message SummarizeByEquipmentRequest {
+	SummarizeByEquipmentCondition equipment = 1;
+	string sort = 2;
+	int32 skip = 3;
+	int32 limit = 4;
+}
+
+message SummarizeByEquipmentResponse {
+	repeated double totalAmounts = 1;
+	repeated double totalIncomes = 2;
+	repeated int32 totalCounts = 3;
+	repeated OrderDetail details = 4;
+}
+
+message SummarizeByEquipmentsRequest {
+	repeated SummarizeByEquipmentCondition equipments = 1;
+	string sort = 2;
+	int32 skip = 3;
+	int32 limit = 4;
+}
+
+message SummarizeByEquipmentsResponse {
+	repeated double totalAmounts = 1;
+	repeated double totalIncomes = 2;
+	repeated int32 totalCounts = 3;
+	repeated OrderDetail details = 4;
+}
+
+service OrderApp {
+	rpc Get (GetRequest) returns (GetResponse) {}
+	rpc GetListByIds (GetListByIdsRequest) returns (GetListByIdsResponse) {}
+	rpc GetListByUserId (GetListByUserIdRequest) returns (GetListByUserIdResponse) {}
+	rpc SummarizeByUser (SummarizeByUserRequest) returns (SummarizeByUserResponse) {}
+	rpc SummarizeByUsers (SummarizeByUsersRequest) returns (SummarizeByUsersResponse) {}
+	rpc SummarizeByEquipment (SummarizeByEquipmentRequest) returns (SummarizeByEquipmentResponse) {}
+	rpc SummarizeByEquipments (SummarizeByEquipmentsRequest) returns (SummarizeByEquipmentsResponse) {}
+}

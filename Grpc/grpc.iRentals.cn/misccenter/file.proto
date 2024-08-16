@@ -1,0 +1,31 @@
+﻿syntax = "proto3";
+
+option csharp_namespace = "MiscCenter.GrpcServer";
+
+package File;
+service FileApp {
+  rpc GetToken (QiniuTokenRequest) returns (QiniuTokenResult) {}
+  rpc GetUrl (QiniuUrlRequest) returns (QiniuUrlResult) {}
+  rpc GetBatchUrl (QiniuUrlBatchRequest) returns (QiniuUrlBatchResult) {}
+}
+message QiniuTokenRequest {
+  string BuketName= 1;
+}
+message QiniuTokenResult{
+  string token=1;
+}
+message QiniuUrlRequest {
+  string Url=2;
+  int32 ExpireSeconds=3;
+}
+message QiniuUrlBatchRequest {
+  repeated string Urls=1;
+  int32 ExpireSeconds=2;
+}
+message QiniuUrlResult{
+  string Url=1;
+}
+message QiniuUrlBatchResult{
+  int32 Total=1;
+  repeated string Urls=2;
+}

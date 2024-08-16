@@ -1,0 +1,31 @@
+﻿syntax = "proto3";
+
+option csharp_namespace = "IRentals.Community.GrpcServer";
+
+package PaperService;
+
+service Paper {
+  rpc GetPaperByUserTrial (PaperRequest) returns (PaperSummaryResult) {}
+}
+
+message PaperRequest {
+  repeated PaperRequestData request= 1;
+  int32 content=2;  /*1--返回发布的内容ID  0不返回*/
+}
+message PaperRequestData{
+  string userId=1;
+  int32  trialId=2;
+}
+message PaperSummaryResult{
+ int32 total=1;
+ repeated PaperResultData data=2;
+}
+message PaperResultData {
+  string userId=1;
+  int32 trialId=2;
+  int32 paperId=3;
+  string status=4;
+  double score=5;
+  string reject=6;
+  int32 contentId=7;
+}

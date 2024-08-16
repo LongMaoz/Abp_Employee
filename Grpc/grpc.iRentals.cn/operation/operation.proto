@@ -1,0 +1,32 @@
+﻿syntax = "proto3";
+
+option csharp_namespace = "GrpcServer.Operation";
+
+package Operation;
+
+service OperationApp {
+  rpc ExistProduct(ProductRequest) returns (OperationReply) {}
+  rpc ExistBrand(BrandRequest) returns (OperationReply) {}
+  rpc ExistPurpose(PurposeRequest) returns (OperationReply) {}
+  rpc ExistGroup(GroupRequest) returns (OperationReply) {}
+}
+
+// The request message containing the user's name.
+message ProductRequest {
+ repeated int32 ProductId=1;
+}
+message BrandRequest {
+ repeated int32 BrandId=1;
+}
+message PurposeRequest {
+ repeated int32 PurposeId=1;
+}
+message GroupRequest {
+ repeated int32 GroupId=2;
+}
+// The response message containing the greetings.
+message OperationReply {
+ int32 existCampaign=1;
+ int32 existPromotion=2;
+ int32 existPassphrase=3;
+}

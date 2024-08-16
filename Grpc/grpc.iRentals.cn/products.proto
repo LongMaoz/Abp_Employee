@@ -1,0 +1,259 @@
+syntax = "proto3";
+
+package products;
+
+import "google/protobuf/any.proto";
+import "google/protobuf/empty.proto";
+import "google/protobuf/wrappers.proto";
+
+// --- 商品型号接口 START ---
+
+service ProductsService {
+    rpc GetProductById (ProductById) returns (Product) {}
+    rpc GetProductsByIds (ProductsById) returns (ProductList) {}
+    rpc FindAll (FindAllRequest) returns (ProductList) {}
+    rpc FindBrandAndPurposeByIds (ProductsById) returns (ProductWithBrandAndPurposeResult) {}
+    rpc CountProductByAccessoryIds (ProductsById) returns (CountProductByAccessoryResult) {}
+    rpc GetPreferredOwnership (PreferredOwnershipRequest) returns (PreferredOwnershipResult) {}
+}
+
+// 型号外网接口
+service ProductsPublicService {
+    // 根据活动及型号id获取型号信息
+    rpc GetProductByActivity (GetProductByActivityRequest) returns (GetProductByActivityResponse) {}
+    // 根据型号id获取配件列表
+    rpc GetAccessoryByProductId (ProductById) returns (GetProductAccessoryResponse) {}
+    // 综合查询型号列表
+    rpc FindByPage (FindByPageRequest) returns (ProductsResult) {}
+    // 关键字查询型号列表
+    rpc SearchByPage (SearchByPageRequest) returns (ProductsResult) {}
+}
+
+message Product {
+    int32 id = 1;
+    string createTime = 2;
+    string updateTime = 3;
+    string deleteTime = 4;
+    int32 priority = 5;
+    string coding = 6;
+    string name = 7;
+    string overview = 8;
+    double deposit = 9;
+    double insurance = 10;
+    double rent = 11;
+    double renew = 12;
+    int32 discount = 13;
+    int32 atLeast = 14;
+    int32 atMost = 15;
+    repeated Instruction instructions = 16;
+    repeated string images = 17;
+    repeated string samples = 18;
+    int32 typeId = 19;
+    string rentType = 20;
+    string rentTime = 21;
+    string remark = 22;
+    string status = 23;
+    int32 operatorId = 24;
+    string operatorName = 25;
+    int32 creatorId = 26;
+    string creatorName = 27;
+    double originPrice = 28; // 最低原单价
+    double discountPrice = 29; // 最低优惠单价
+    Activity activity = 30; // 活动信息
+    repeated ProductAccessory productAccessories = 31; // 配件列表
+    int32 allowKeeper = 32; // 允许托管 是1,否0
+    string transportType = 33; // 运输方式 AIR-空运 LAND-陆运
+    Type type = 34; // 类型
+    Brand brand = 35; // 品牌
+    int32 allowConsignment = 36; // 允许寄卖 是1,否0
+    repeated Addon addons = 37;
+}
+
+message Type {
+    int32 id = 1;
+    string name = 2;
+}
+
+message Brand {
+    int32 id = 1;
+    string name = 2;
+}
+
+message Instruction {
+    int32 size = 1;
+    string name = 2;
+    string url = 3;
+}
+
+message ProductById {
+    int32 id = 1;
+}
+
+message ProductByName {
+    string name = 1;
+}
+
+message ProductsById {
+    repeated int32 ids = 1;
+}
+
+message PreferredOwnershipRequest {
+    int32 id = 1;
+    string deliveryWay = 2;
+    int32 rentDays = 3;
+}
+
+message PreferredOwnershipResult {
+    string ownership = 1;
+}
+
+message FindAllRequest {
+    repeated int32 ids = 1;
+    repeated int32 brandIds = 2;
+    repeated int32 purposeIds = 3;
+    repeated int32 groupIds = 4;
+    repeated int32 typeIds = 5;
+    repeated string statuses = 6;
+    string keyword = 7;
+}
+
+message ListProductsRequest {
+    int32 offset = 1;
+    int32 limit = 2;
+}
+
+message SearchProductsRequest {
+    string keyword = 1;
+    repeated string fields = 2;
+    int32 offset = 3;
+    int32 limit = 4;
+}
+
+message FindByPageRequest {
+    int32 offset = 1;
+    int32 limit = 2;
+    repeated int32 typeIds = 3; // 类型id数组
+    repeated int32 brandIds = 4; // 品牌id数组
+    repeated int32 purposeIds = 5; // 用途id数组
+    int32 sortType = 6; // 排序类型,1-默认排序,2-价格降序,3-价格升序,4-最新上架,5-三天租金降序,6-三天租金升序,7-指定id排序
+    string status = 7; // 状态 上架ONSALE,下架UNSALE
+    google.protobuf.Int32Value allowKeeper = 8; // 允许托管 是1,否0 是一个对象包装类型兼容可选属性 { value: int32 }
+    repeated int32 ids = 9; // 型号id数组
+    repeated int32 excludeIds = 10; // 排除的型号id数组
+    google.protobuf.Int32Value allowConsignment = 11; // 允许寄卖 是1,否0 是一个对象包装类型兼容可选属性 { value: int32 }
+    repeated int32 specifySortIds = 12; // 指定排序型号id数组
+}
+
+message SearchByPageRequest {
+    string keyword = 1;
+    int32 offset = 2;
+    int32 limit = 3;
+    string status = 4; // 状态 上架ONSALE,下架UNSALE
+    google.protobuf.Int32Value allowKeeper = 5; // 允许托管 是1,否0 是一个对象包装类型兼容可选属性 { value: int32 }
+    repeated int32 ids = 6; // 型号id数组
+    repeated int32 excludeIds = 7; // 排除的型号id数组
+    google.protobuf.Int32Value allowConsignment = 8; // 允许寄卖 是1,否0 是一个对象包装类型兼容可选属性 { value: int32 }
+}
+
+message ProductWithBrandAndPurpose {
+    int32 id = 1; // 型号id
+    int32 brandId = 2; // 品牌id
+    repeated int32 purposeIds = 3; // 用途id数组
+    double deposit = 4; // 押金
+    string name = 5; // 名称
+    string status = 6; // 状态 ONSALE上架 UNSALE下架
+    repeated int32 groupIds = 7; // 分组id数组
+}
+
+message ProductAccessory {
+    int32 productId = 1; // 型号id
+    int32 accessoryId = 2; // 配件id
+    string accessoryName = 3; // 配件名称
+    int32 count = 4; // 数量
+}
+
+message ProductWithBrandAndPurposeResult {
+    repeated ProductWithBrandAndPurpose list = 1;
+}
+
+message AccessoryProductCount {
+    int32 accessoryId = 1; // 配件id
+    int32 productCount = 2; // 型号数量
+}
+
+message CountProductByAccessoryResult {
+    repeated AccessoryProductCount list = 1;
+}
+
+message ProductsResult {
+    int32 total = 1;
+    repeated Product rows = 2;
+}
+
+message ProductList {
+    repeated Product products = 1;
+}
+
+message Activity {
+    int32 id = 1; // 活动id
+    string type = 2; // 类型 打折DISCOUNT 一口价FIXED
+    double discount = 3; // 折扣 类型为DISCOUNT时有效
+}
+
+message ActivityRequest {
+    int32 id = 1; // 活动id
+    string type = 2; // 类型 打折DISCOUNT 一口价FIXED
+    double discount = 3; // 折扣
+    double ceiling = 4; // 封顶优惠
+    double pricing = 5; // 一口价
+    repeated int32 productIds = 6; // 型号id数组
+}
+
+message ActivityResponse {
+    int32 id = 1; // 活动id
+    repeated Product products = 2; // 型号数组
+}
+
+// 获取活动型号请求体
+message GetProductByActivityRequest {
+    string userId = 1; // 用户id
+    repeated ActivityRequest activities = 2; // 活动请求数组
+}
+
+// 获取活动型号响应体
+message GetProductByActivityResponse {
+    repeated ActivityResponse activities = 1; // 活动响应数组
+}
+
+// 获取型号配件响应体
+message GetProductAccessoryResponse {
+    repeated ProductAccessory list = 1;
+}
+
+// --- 商品型号接口 END ---
+
+
+// --- 附加服务接口 START ---
+
+// 附加服务接口
+service AddonService {
+    // 根据id批量获取信息
+    rpc FindByIds (ProductsById) returns (FindByIdsResult) {}
+}
+
+message Addon {
+    int32 id = 1;
+    string name = 2; // 名称
+    string overview = 3; // 简介
+    string remark = 4; // 备注
+    double deposit = 5; // 押金
+    double rent = 6; // 三天租金
+    double renew = 7; // 续租
+    repeated string images = 8; // 图片数组
+}
+
+message FindByIdsResult {
+    repeated Addon list = 1;
+}
+
+// --- 附加服务接口 END ---

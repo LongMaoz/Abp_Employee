@@ -1,0 +1,16 @@
+﻿syntax = "proto3";
+
+option csharp_namespace = "IRentals.UniqueIdGeneratorService";
+
+package uid.generator;
+
+message CreateRequest {
+}
+
+message CreateResponse {
+	int64 id = 1;
+}
+
+service SnowflakeApp {
+    rpc Create (CreateRequest) returns (CreateResponse) {}
+}

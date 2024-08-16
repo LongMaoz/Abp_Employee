@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+option csharp_namespace = "HelpCenter.GrpcServer";
+
+package Question;
+
+service QuestionApp {
+  rpc ExsitQuestionProduct (QuestionProductRequest) returns (QuestionProductReply) {}
+}
+
+message QuestionProductRequest {
+  int32 productId = 1;
+}
+
+message QuestionProductReply {
+  int32 exist = 1;
+  string questionIds=2;
+}

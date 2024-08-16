@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+option csharp_namespace = "HelpCenter.GrpcServer";
+
+package Scene;
+
+// The greeting service definition.
+service QuestioScene {
+  // Sends a greeting
+  rpc ExsitQuestionScene (QuestionSceneRequest) returns (QuestionSceneReply) {}
+}
+
+// The request message containing the user's name.
+message QuestionSceneRequest {
+  int32 sceneId = 1;
+}
+
+// The response message containing the greetings.
+message QuestionSceneReply {
+  int32 exist = 1;
+}

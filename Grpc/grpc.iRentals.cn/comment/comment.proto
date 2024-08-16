@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+package comment;
+
+// --- 评论接口 START ---
+
+service CommentService {
+    rpc MultiCount (MultiCountParam) returns (CountList) {}
+}
+
+message CountItem {
+    int32 targetId = 1; // 目标id
+    int32 total = 2; // 评论数
+}
+
+message CountList {
+    repeated CountItem countList = 1; // 结果数组
+}
+
+message MultiCountParam {
+    string type = 1; // 类型：content-内容 trial-众测活动
+    repeated int32 ids = 2; // 目标id数组
+    string userId = 3; // 用户id 可选
+}
+
+// --- 评论接口 END ---

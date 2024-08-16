@@ -1,0 +1,57 @@
+﻿syntax = "proto3";
+import "google/protobuf/wrappers.proto";
+option csharp_namespace = "TransferServer.GrpcServer";
+
+package TransferServer;
+
+service TransferApp {
+	rpc GetTransferById (TransferRequestId) returns (TransferInfoResponse){};
+	rpc GetTransferByIds (TransferRequestIds) returns (TransferBatchInfoResponse){};
+    rpc GetTransferByEquipments (TransferEquipmentRequest) returns (TransferEquipmentsResponse){};
+  
+}
+message TransferRequestId{
+    int64 Id=1;
+}
+message TransferRequestIds{
+    repeated int64 Ids=1;
+}
+message TransferEquipmentRequest {
+    repeated int32 EquipmentIds = 1;
+    google.protobuf.BoolValue IsAll = 2;  /**defalut valid Transfer**/
+}
+message TransferInfoResponse{
+    TransferInfoData Transfer=1;
+}
+message TransferInfoData{
+    int64 Id=1;
+    string Status=2;
+    TransferStore OutStore=3;
+    TransferStore InStore=4;
+    repeated TranseferEquipment Equipments=5;
+    string Type=6; /*调仓类型 新店开业 NEW_STORE,库存分流 STOCK_DIVERSION,内部调单 INTERNAL_ORDER*/
+}
+message TransferBatchInfoResponse{
+	repeated TransferInfoData Transfers=1;
+}
+
+message TransferStore{
+	int32 Id=1;
+	string Name=2;
+}
+message TranseferEquipment{
+	int32 EquipmentId=1;
+	string UniqueCode=2;
+	string DeliveryTime=3;
+	string ReceivedTime=4;
+}
+message TransferEquipmentsResponse{
+    repeated TransferEquipmentResponse Transfers=1;
+}
+message TransferEquipmentResponse {
+    int32 EquipmentId = 1;
+    int64 TransferId=2;
+    string Status=3;
+    int32 OutStoreId=4;
+    int32 InStoreId=5;
+}

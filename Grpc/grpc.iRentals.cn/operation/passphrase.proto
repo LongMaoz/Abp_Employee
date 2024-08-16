@@ -1,0 +1,62 @@
+﻿syntax = "proto3";
+
+option csharp_namespace = "GrpcServer.Operation";
+
+package Passphrase;
+
+//
+service Passphraser {
+  
+    rpc GetPassphraseById (PassphraseIdRequest) returns (PassphrasesResult) {}
+    rpc GetPassphraseByIds (PassphraseIdsRequest) returns (PassphrasesResult) {}
+	rpc ProductPassphraseCompose(ProductPassphraseItemRequest) returns (ProductPassphraseSingleResult){}
+}
+message PassphraseIdRequest {
+  int32 id=1;
+}
+message PassphrasesResult {
+ int32 total=1;
+ repeated PassphraseResult data=2;
+}
+message PassphraseIdsRequest {
+ repeated int32 ids=1;
+}
+message PPassphraseListReply {
+ int32 total=1;
+ repeated PassphraseResult data=2;
+}
+message PassphraseResult{
+  int32  ID=1;
+  string Type=2;//0-代金券 CASH,1-折扣券 DISCOUNT,2-延长券 PERIOD
+  string Title=3;
+  string Description=4;
+  double Quota=5;
+  double Reduce=6;
+  double Discount=7;
+  double Ceiling=8;
+  string StartTime=9;
+  string EndTime=10;
+  string QuotaUnit=11;
+  string ReduceUnit=12;
+  int32  RemainQty=13; //剩余数量
+  string Status=14; //状态  0- 未开始 NOT_STARTED,1-进行中 IN_PROGRESS,2-已暂停 PAUSED,3-已结束 FINISHED
+  string Code=15;
+  string IsAllProducts=16;
+  string IsAllScenes=17;
+}
+message ProductPassphraseItemRequest {
+ repeated ProductPassphraseComposeRequest ProductPassphrase=1;	 
+ int32 SceneId=2;
+}
+message ProductPassphraseComposeRequest{
+ int32 ProductId=1;
+ int32 PassphraseId=2;
+}
+message ProductPassphraseSingleResult{
+ int32 Total=1;
+ repeated PassphraseSingleResult Data=2;
+}
+message PassphraseSingleResult{
+ int32 ProductId=1;
+ PassphraseResult Passphrase=2;
+}

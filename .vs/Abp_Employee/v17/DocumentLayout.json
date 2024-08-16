@@ -1,0 +1,615 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\UGit\\Abp_Employee\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{54B0837F-77EB-4CC1-AD2F-F638B5FF9E7B}|Api.Employee\\Api.Employee.csproj|d:\\ugit\\abp_employee\\api.employee\\apiemployeemodule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54B0837F-77EB-4CC1-AD2F-F638B5FF9E7B}|Api.Employee\\Api.Employee.csproj|solutionrelative:api.employee\\apiemployeemodule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C9078D4E-DDBB-4601-9FE4-36781BE35216}|CustomApplication\\CustomApplication.csproj|d:\\ugit\\abp_employee\\customapplication\\applicationmodule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C9078D4E-DDBB-4601-9FE4-36781BE35216}|CustomApplication\\CustomApplication.csproj|solutionrelative:customapplication\\applicationmodule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{12B173F1-1E1D-419E-98C2-EAC873B2C9B6}|Employee.GrpcService\\Employee.GrpcService.csproj|d:\\ugit\\abp_employee\\employee.grpcservice\\employeegrpcservicemodule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{12B173F1-1E1D-419E-98C2-EAC873B2C9B6}|Employee.GrpcService\\Employee.GrpcService.csproj|solutionrelative:employee.grpcservice\\employeegrpcservicemodule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{01060C83-480D-41C8-82A5-30D70AEB45E9}|IdentityServer\\IdentityServer.csproj|d:\\ugit\\abp_employee\\identityserver\\identityserver.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{01060C83-480D-41C8-82A5-30D70AEB45E9}|IdentityServer\\IdentityServer.csproj|solutionrelative:identityserver\\identityserver.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54B0837F-77EB-4CC1-AD2F-F638B5FF9E7B}|Api.Employee\\Api.Employee.csproj|d:\\ugit\\abp_employee\\api.employee\\api.employee.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{54B0837F-77EB-4CC1-AD2F-F638B5FF9E7B}|Api.Employee\\Api.Employee.csproj|solutionrelative:api.employee\\api.employee.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B555CBFB-A6E3-4CAB-859E-CADE7F86724B}|Services.Employee\\Services.Employee.csproj|d:\\ugit\\abp_employee\\services.employee\\employeemanagementservicemodule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B555CBFB-A6E3-4CAB-859E-CADE7F86724B}|Services.Employee\\Services.Employee.csproj|solutionrelative:services.employee\\employeemanagementservicemodule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{01060C83-480D-41C8-82A5-30D70AEB45E9}|IdentityServer\\IdentityServer.csproj|d:\\ugit\\abp_employee\\identityserver\\identityservermodule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{01060C83-480D-41C8-82A5-30D70AEB45E9}|IdentityServer\\IdentityServer.csproj|solutionrelative:identityserver\\identityservermodule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A93BCA4A-78C0-4C88-8435-87134902E1F0}|CustomEntityFramework\\CustomEntityFramework.csproj|d:\\ugit\\abp_employee\\customentityframework\\customentityframeworkmodule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A93BCA4A-78C0-4C88-8435-87134902E1F0}|CustomEntityFramework\\CustomEntityFramework.csproj|solutionrelative:customentityframework\\customentityframeworkmodule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{01060C83-480D-41C8-82A5-30D70AEB45E9}|IdentityServer\\IdentityServer.csproj|d:\\ugit\\abp_employee\\identityserver\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{01060C83-480D-41C8-82A5-30D70AEB45E9}|IdentityServer\\IdentityServer.csproj|solutionrelative:identityserver\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{01060C83-480D-41C8-82A5-30D70AEB45E9}|IdentityServer\\IdentityServer.csproj|d:\\ugit\\abp_employee\\identityserver\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{01060C83-480D-41C8-82A5-30D70AEB45E9}|IdentityServer\\IdentityServer.csproj|solutionrelative:identityserver\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{807734BE-6B17-4136-BA78-AB65140C0971}|GrpcService\\GrpcService.csproj|d:\\ugit\\abp_employee\\grpcservice\\grpcservice.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{807734BE-6B17-4136-BA78-AB65140C0971}|GrpcService\\GrpcService.csproj|solutionrelative:grpcservice\\grpcservice.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C9078D4E-DDBB-4601-9FE4-36781BE35216}|CustomApplication\\CustomApplication.csproj|d:\\ugit\\abp_employee\\customapplication\\customapplication.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{C9078D4E-DDBB-4601-9FE4-36781BE35216}|CustomApplication\\CustomApplication.csproj|solutionrelative:customapplication\\customapplication.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A93BCA4A-78C0-4C88-8435-87134902E1F0}|CustomEntityFramework\\CustomEntityFramework.csproj|d:\\ugit\\abp_employee\\customentityframework\\repository\\employeegrouprepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A93BCA4A-78C0-4C88-8435-87134902E1F0}|CustomEntityFramework\\CustomEntityFramework.csproj|solutionrelative:customentityframework\\repository\\employeegrouprepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AF6BE4E4-0CAA-4182-8F13-254AED816177}|EventBus.Publish\\EventBus.Publish.csproj|d:\\ugit\\abp_employee\\eventbus.publish\\eventbus.publish.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{AF6BE4E4-0CAA-4182-8F13-254AED816177}|EventBus.Publish\\EventBus.Publish.csproj|solutionrelative:eventbus.publish\\eventbus.publish.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{166056B4-CD63-4B5C-A649-AD1A29427552}|CustomCasbin\\CustomCasbin.csproj|d:\\ugit\\abp_employee\\customcasbin\\casbinmodule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{166056B4-CD63-4B5C-A649-AD1A29427552}|CustomCasbin\\CustomCasbin.csproj|solutionrelative:customcasbin\\casbinmodule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{166056B4-CD63-4B5C-A649-AD1A29427552}|CustomCasbin\\CustomCasbin.csproj|d:\\ugit\\abp_employee\\customcasbin\\examples\\rbac_with_root_without_resources_model.conf||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{166056B4-CD63-4B5C-A649-AD1A29427552}|CustomCasbin\\CustomCasbin.csproj|solutionrelative:customcasbin\\examples\\rbac_with_root_without_resources_model.conf||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{166056B4-CD63-4B5C-A649-AD1A29427552}|CustomCasbin\\CustomCasbin.csproj|d:\\ugit\\abp_employee\\customcasbin\\examples\\rbac_model.conf||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{166056B4-CD63-4B5C-A649-AD1A29427552}|CustomCasbin\\CustomCasbin.csproj|solutionrelative:customcasbin\\examples\\rbac_model.conf||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{166056B4-CD63-4B5C-A649-AD1A29427552}|CustomCasbin\\CustomCasbin.csproj|d:\\ugit\\abp_employee\\customcasbin\\examples\\rbac_with_resource_roles_model.conf||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{166056B4-CD63-4B5C-A649-AD1A29427552}|CustomCasbin\\CustomCasbin.csproj|solutionrelative:customcasbin\\examples\\rbac_with_resource_roles_model.conf||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AF6BE4E4-0CAA-4182-8F13-254AED816177}|EventBus.Publish\\EventBus.Publish.csproj|d:\\ugit\\abp_employee\\eventbus.publish\\eventbuspublishmodule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AF6BE4E4-0CAA-4182-8F13-254AED816177}|EventBus.Publish\\EventBus.Publish.csproj|solutionrelative:eventbus.publish\\eventbuspublishmodule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AF6BE4E4-0CAA-4182-8F13-254AED816177}|EventBus.Publish\\EventBus.Publish.csproj|d:\\ugit\\abp_employee\\eventbus.publish\\public\\employeeeventpublic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AF6BE4E4-0CAA-4182-8F13-254AED816177}|EventBus.Publish\\EventBus.Publish.csproj|solutionrelative:eventbus.publish\\public\\employeeeventpublic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AF6BE4E4-0CAA-4182-8F13-254AED816177}|EventBus.Publish\\EventBus.Publish.csproj|d:\\ugit\\abp_employee\\eventbus.publish\\interface\\iemployeeeventpublic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AF6BE4E4-0CAA-4182-8F13-254AED816177}|EventBus.Publish\\EventBus.Publish.csproj|solutionrelative:eventbus.publish\\interface\\iemployeeeventpublic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D3AB90EF-C7BC-41D9-8C06-8850480D68A2}|CustomMiddler\\CustomMiddler.csproj|d:\\ugit\\abp_employee\\custommiddler\\model\\apiresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D3AB90EF-C7BC-41D9-8C06-8850480D68A2}|CustomMiddler\\CustomMiddler.csproj|solutionrelative:custommiddler\\model\\apiresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D3AB90EF-C7BC-41D9-8C06-8850480D68A2}|CustomMiddler\\CustomMiddler.csproj|d:\\ugit\\abp_employee\\custommiddler\\custommiddler.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{D3AB90EF-C7BC-41D9-8C06-8850480D68A2}|CustomMiddler\\CustomMiddler.csproj|solutionrelative:custommiddler\\custommiddler.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2AEF3704-B0A7-47B4-BD65-E1A0E4D5C5D4}|AliCloud\\AliCloud.csproj|d:\\ugit\\abp_employee\\alicloud\\alicloud.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{2AEF3704-B0A7-47B4-BD65-E1A0E4D5C5D4}|AliCloud\\AliCloud.csproj|solutionrelative:alicloud\\alicloud.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C9078D4E-DDBB-4601-9FE4-36781BE35216}|CustomApplication\\CustomApplication.csproj|d:\\ugit\\abp_employee\\customapplication\\exception\\customvalidationexceptionhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C9078D4E-DDBB-4601-9FE4-36781BE35216}|CustomApplication\\CustomApplication.csproj|solutionrelative:customapplication\\exception\\customvalidationexceptionhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2AEF3704-B0A7-47B4-BD65-E1A0E4D5C5D4}|AliCloud\\AliCloud.csproj|d:\\ugit\\abp_employee\\alicloud\\ialicloudsmsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2AEF3704-B0A7-47B4-BD65-E1A0E4D5C5D4}|AliCloud\\AliCloud.csproj|solutionrelative:alicloud\\ialicloudsmsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2AEF3704-B0A7-47B4-BD65-E1A0E4D5C5D4}|AliCloud\\AliCloud.csproj|d:\\ugit\\abp_employee\\alicloud\\alicloudsmsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2AEF3704-B0A7-47B4-BD65-E1A0E4D5C5D4}|AliCloud\\AliCloud.csproj|solutionrelative:alicloud\\alicloudsmsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2AEF3704-B0A7-47B4-BD65-E1A0E4D5C5D4}|AliCloud\\AliCloud.csproj|d:\\ugit\\abp_employee\\alicloud\\alicloudmodule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2AEF3704-B0A7-47B4-BD65-E1A0E4D5C5D4}|AliCloud\\AliCloud.csproj|solutionrelative:alicloud\\alicloudmodule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2994E1BD-8BDE-4DF5-BC6A-F8C7EFFC85F3}|CustomDomain\\CustomDomain.csproj|d:\\ugit\\abp_employee\\customdomain\\irepository\\iemployeegrouprepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2994E1BD-8BDE-4DF5-BC6A-F8C7EFFC85F3}|CustomDomain\\CustomDomain.csproj|solutionrelative:customdomain\\irepository\\iemployeegrouprepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F882B2A-3F58-4500-A53F-7B754E068BC6}|CustomDomain.Shared\\CustomDomain.Shared.csproj|d:\\ugit\\abp_employee\\customdomain.shared\\customdomain.shared.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{4F882B2A-3F58-4500-A53F-7B754E068BC6}|CustomDomain.Shared\\CustomDomain.Shared.csproj|solutionrelative:customdomain.shared\\customdomain.shared.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F882B2A-3F58-4500-A53F-7B754E068BC6}|CustomDomain.Shared\\CustomDomain.Shared.csproj|d:\\ugit\\abp_employee\\customdomain.shared\\enums\\employeestatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4F882B2A-3F58-4500-A53F-7B754E068BC6}|CustomDomain.Shared\\CustomDomain.Shared.csproj|solutionrelative:customdomain.shared\\enums\\employeestatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F882B2A-3F58-4500-A53F-7B754E068BC6}|CustomDomain.Shared\\CustomDomain.Shared.csproj|d:\\ugit\\abp_employee\\customdomain.shared\\enums\\rabbitroutingkeyenum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4F882B2A-3F58-4500-A53F-7B754E068BC6}|CustomDomain.Shared\\CustomDomain.Shared.csproj|solutionrelative:customdomain.shared\\enums\\rabbitroutingkeyenum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F882B2A-3F58-4500-A53F-7B754E068BC6}|CustomDomain.Shared\\CustomDomain.Shared.csproj|d:\\ugit\\abp_employee\\customdomain.shared\\enums\\returnoption.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4F882B2A-3F58-4500-A53F-7B754E068BC6}|CustomDomain.Shared\\CustomDomain.Shared.csproj|solutionrelative:customdomain.shared\\enums\\returnoption.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F882B2A-3F58-4500-A53F-7B754E068BC6}|CustomDomain.Shared\\CustomDomain.Shared.csproj|d:\\ugit\\abp_employee\\customdomain.shared\\attributes\\enumstringattribute.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4F882B2A-3F58-4500-A53F-7B754E068BC6}|CustomDomain.Shared\\CustomDomain.Shared.csproj|solutionrelative:customdomain.shared\\attributes\\enumstringattribute.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F882B2A-3F58-4500-A53F-7B754E068BC6}|CustomDomain.Shared\\CustomDomain.Shared.csproj|d:\\ugit\\abp_employee\\customdomain.shared\\enums\\rabbitexchangeenum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4F882B2A-3F58-4500-A53F-7B754E068BC6}|CustomDomain.Shared\\CustomDomain.Shared.csproj|solutionrelative:customdomain.shared\\enums\\rabbitexchangeenum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 9,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Api.Employee",
+              "DocumentMoniker": "D:\\UGit\\Abp_Employee\\Api.Employee\\Api.Employee.csproj",
+              "RelativeDocumentMoniker": "Api.Employee\\Api.Employee.csproj",
+              "ToolTip": "D:\\UGit\\Abp_Employee\\Api.Employee\\Api.Employee.csproj",
+              "RelativeToolTip": "Api.Employee\\Api.Employee.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-08-16T06:34:59.115Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "EmployeeManagementServiceModule.cs",
+              "DocumentMoniker": "D:\\UGit\\Abp_Employee\\Services.Employee\\EmployeeManagementServiceModule.cs",
+              "RelativeDocumentMoniker": "Services.Employee\\EmployeeManagementServiceModule.cs",
+              "ToolTip": "D:\\UGit\\Abp_Employee\\Services.Employee\\EmployeeManagementServiceModule.cs",
+              "RelativeToolTip": "Services.Employee\\EmployeeManagementServiceModule.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-16T06:23:45.043Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "CustomEntityFrameworkModule.cs",
+              "DocumentMoniker": "D:\\UGit\\Abp_Employee\\CustomEntityFramework\\CustomEntityFrameworkModule.cs",
+              "RelativeDocumentMoniker": "CustomEntityFramework\\CustomEntityFrameworkModule.cs",
+              "ToolTip": "D:\\UGit\\Abp_Employee\\CustomEntityFramework\\CustomEntityFrameworkModule.cs",
+              "RelativeToolTip": "CustomEntityFramework\\CustomEntityFrameworkModule.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAoAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-16T06:23:27.969Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "IdentityServerModule.cs",
+              "DocumentMoniker": "D:\\UGit\\Abp_Employee\\IdentityServer\\IdentityServerModule.cs",
+              "RelativeDocumentMoniker": "IdentityServer\\IdentityServerModule.cs",
+              "ToolTip": "D:\\UGit\\Abp_Employee\\IdentityServer\\IdentityServerModule.cs",
+              "RelativeToolTip": "IdentityServer\\IdentityServerModule.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAArAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-16T06:23:09.837Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "IdentityServer",
+              "DocumentMoniker": "D:\\UGit\\Abp_Employee\\IdentityServer\\IdentityServer.csproj",
+              "RelativeDocumentMoniker": "IdentityServer\\IdentityServer.csproj",
+              "ToolTip": "D:\\UGit\\Abp_Employee\\IdentityServer\\IdentityServer.csproj",
+              "RelativeToolTip": "IdentityServer\\IdentityServer.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-08-16T06:20:55.838Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "WeatherForecast.cs",
+              "DocumentMoniker": "D:\\UGit\\Abp_Employee\\IdentityServer\\WeatherForecast.cs",
+              "RelativeDocumentMoniker": "IdentityServer\\WeatherForecast.cs",
+              "ToolTip": "D:\\UGit\\Abp_Employee\\IdentityServer\\WeatherForecast.cs",
+              "RelativeToolTip": "IdentityServer\\WeatherForecast.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-16T06:20:45.288Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\UGit\\Abp_Employee\\IdentityServer\\Program.cs",
+              "RelativeDocumentMoniker": "IdentityServer\\Program.cs",
+              "ToolTip": "D:\\UGit\\Abp_Employee\\IdentityServer\\Program.cs",
+              "RelativeToolTip": "IdentityServer\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAABLAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-16T06:20:43.606Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ApplicationModule.cs",
+              "DocumentMoniker": "D:\\UGit\\Abp_Employee\\CustomApplication\\ApplicationModule.cs",
+              "RelativeDocumentMoniker": "CustomApplication\\ApplicationModule.cs",
+              "ToolTip": "D:\\UGit\\Abp_Employee\\CustomApplication\\ApplicationModule.cs",
+              "RelativeToolTip": "CustomApplication\\ApplicationModule.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABoAAAAeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-16T06:18:24.571Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "CustomApplication",
+              "DocumentMoniker": "D:\\UGit\\Abp_Employee\\CustomApplication\\CustomApplication.csproj",
+              "RelativeDocumentMoniker": "CustomApplication\\CustomApplication.csproj",
+              "ToolTip": "D:\\UGit\\Abp_Employee\\CustomApplication\\CustomApplication.csproj",
+              "RelativeToolTip": "CustomApplication\\CustomApplication.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-08-16T06:18:15.621Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ApiEmployeeModule.cs",
+              "DocumentMoniker": "D:\\UGit\\Abp_Employee\\Api.Employee\\ApiEmployeeModule.cs",
+              "RelativeDocumentMoniker": "Api.Employee\\ApiEmployeeModule.cs",
+              "ToolTip": "D:\\UGit\\Abp_Employee\\Api.Employee\\ApiEmployeeModule.cs",
+              "RelativeToolTip": "Api.Employee\\ApiEmployeeModule.cs",
+              "ViewState": "AQIAABMAAAAAAAAAAAAAAB4AAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-16T06:17:08.128Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "EmployeeGroupRepository.cs",
+              "DocumentMoniker": "D:\\UGit\\Abp_Employee\\CustomEntityFramework\\Repository\\EmployeeGroupRepository.cs",
+              "RelativeDocumentMoniker": "CustomEntityFramework\\Repository\\EmployeeGroupRepository.cs",
+              "ToolTip": "D:\\UGit\\Abp_Employee\\CustomEntityFramework\\Repository\\EmployeeGroupRepository.cs",
+              "RelativeToolTip": "CustomEntityFramework\\Repository\\EmployeeGroupRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-16T06:15:44.886Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "GrpcService",
+              "DocumentMoniker": "D:\\UGit\\Abp_Employee\\GrpcService\\GrpcService.csproj",
+              "RelativeDocumentMoniker": "GrpcService\\GrpcService.csproj",
+              "ToolTip": "D:\\UGit\\Abp_Employee\\GrpcService\\GrpcService.csproj",
+              "RelativeToolTip": "GrpcService\\GrpcService.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABgAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-08-16T06:13:55.181Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "EmployeeGrpcServiceModule.cs",
+              "DocumentMoniker": "D:\\UGit\\Abp_Employee\\Employee.GrpcService\\EmployeeGrpcServiceModule.cs",
+              "RelativeDocumentMoniker": "Employee.GrpcService\\EmployeeGrpcServiceModule.cs",
+              "ToolTip": "D:\\UGit\\Abp_Employee\\Employee.GrpcService\\EmployeeGrpcServiceModule.cs",
+              "RelativeToolTip": "Employee.GrpcService\\EmployeeGrpcServiceModule.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAPAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-16T06:14:02.797Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "rbac_with_root_without_resources_model.conf",
+              "DocumentMoniker": "D:\\UGit\\Abp_Employee\\CustomCasbin\\examples\\rbac_with_root_without_resources_model.conf",
+              "RelativeDocumentMoniker": "CustomCasbin\\examples\\rbac_with_root_without_resources_model.conf",
+              "ToolTip": "D:\\UGit\\Abp_Employee\\CustomCasbin\\examples\\rbac_with_root_without_resources_model.conf",
+              "RelativeToolTip": "CustomCasbin\\examples\\rbac_with_root_without_resources_model.conf",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-08-16T06:03:37.812Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "rbac_model.conf",
+              "DocumentMoniker": "D:\\UGit\\Abp_Employee\\CustomCasbin\\examples\\rbac_model.conf",
+              "RelativeDocumentMoniker": "CustomCasbin\\examples\\rbac_model.conf",
+              "ToolTip": "D:\\UGit\\Abp_Employee\\CustomCasbin\\examples\\rbac_model.conf",
+              "RelativeToolTip": "CustomCasbin\\examples\\rbac_model.conf",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-08-16T06:03:36.495Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "rbac_with_resource_roles_model.conf",
+              "DocumentMoniker": "D:\\UGit\\Abp_Employee\\CustomCasbin\\examples\\rbac_with_resource_roles_model.conf",
+              "RelativeDocumentMoniker": "CustomCasbin\\examples\\rbac_with_resource_roles_model.conf",
+              "ToolTip": "D:\\UGit\\Abp_Employee\\CustomCasbin\\examples\\rbac_with_resource_roles_model.conf",
+              "RelativeToolTip": "CustomCasbin\\examples\\rbac_with_resource_roles_model.conf",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-08-16T06:03:35.331Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "CasbinModule.cs",
+              "DocumentMoniker": "D:\\UGit\\Abp_Employee\\CustomCasbin\\CasbinModule.cs",
+              "RelativeDocumentMoniker": "CustomCasbin\\CasbinModule.cs",
+              "ToolTip": "D:\\UGit\\Abp_Employee\\CustomCasbin\\CasbinModule.cs",
+              "RelativeToolTip": "CustomCasbin\\CasbinModule.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-16T06:03:34.45Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "EventBus.Publish",
+              "DocumentMoniker": "D:\\UGit\\Abp_Employee\\EventBus.Publish\\EventBus.Publish.csproj",
+              "RelativeDocumentMoniker": "EventBus.Publish\\EventBus.Publish.csproj",
+              "ToolTip": "D:\\UGit\\Abp_Employee\\EventBus.Publish\\EventBus.Publish.csproj",
+              "RelativeToolTip": "EventBus.Publish\\EventBus.Publish.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-08-16T06:01:23.201Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "EventBusPublishModule.cs",
+              "DocumentMoniker": "D:\\UGit\\Abp_Employee\\EventBus.Publish\\EventBusPublishModule.cs",
+              "RelativeDocumentMoniker": "EventBus.Publish\\EventBusPublishModule.cs",
+              "ToolTip": "D:\\UGit\\Abp_Employee\\EventBus.Publish\\EventBusPublishModule.cs",
+              "RelativeToolTip": "EventBus.Publish\\EventBusPublishModule.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-16T06:01:31.402Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "EmployeeEventPublic.cs",
+              "DocumentMoniker": "D:\\UGit\\Abp_Employee\\EventBus.Publish\\Public\\EmployeeEventPublic.cs",
+              "RelativeDocumentMoniker": "EventBus.Publish\\Public\\EmployeeEventPublic.cs",
+              "ToolTip": "D:\\UGit\\Abp_Employee\\EventBus.Publish\\Public\\EmployeeEventPublic.cs",
+              "RelativeToolTip": "EventBus.Publish\\Public\\EmployeeEventPublic.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-16T06:01:30.881Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "IEmployeeEventPublic.cs",
+              "DocumentMoniker": "D:\\UGit\\Abp_Employee\\EventBus.Publish\\Interface\\IEmployeeEventPublic.cs",
+              "RelativeDocumentMoniker": "EventBus.Publish\\Interface\\IEmployeeEventPublic.cs",
+              "ToolTip": "D:\\UGit\\Abp_Employee\\EventBus.Publish\\Interface\\IEmployeeEventPublic.cs",
+              "RelativeToolTip": "EventBus.Publish\\Interface\\IEmployeeEventPublic.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAAnAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-16T06:01:25.615Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "ApiResponse.cs",
+              "DocumentMoniker": "D:\\UGit\\Abp_Employee\\CustomMiddler\\Model\\ApiResponse.cs",
+              "RelativeDocumentMoniker": "CustomMiddler\\Model\\ApiResponse.cs",
+              "ToolTip": "D:\\UGit\\Abp_Employee\\CustomMiddler\\Model\\ApiResponse.cs",
+              "RelativeToolTip": "CustomMiddler\\Model\\ApiResponse.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-16T05:58:55.899Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "CustomMiddler",
+              "DocumentMoniker": "D:\\UGit\\Abp_Employee\\CustomMiddler\\CustomMiddler.csproj",
+              "RelativeDocumentMoniker": "CustomMiddler\\CustomMiddler.csproj",
+              "ToolTip": "D:\\UGit\\Abp_Employee\\CustomMiddler\\CustomMiddler.csproj",
+              "RelativeToolTip": "CustomMiddler\\CustomMiddler.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-08-16T05:58:49.572Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "IAliCloudSmsService.cs",
+              "DocumentMoniker": "D:\\UGit\\Abp_Employee\\AliCloud\\IAliCloudSmsService.cs",
+              "RelativeDocumentMoniker": "AliCloud\\IAliCloudSmsService.cs",
+              "ToolTip": "D:\\UGit\\Abp_Employee\\AliCloud\\IAliCloudSmsService.cs",
+              "RelativeToolTip": "AliCloud\\IAliCloudSmsService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAKAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-16T05:58:16.682Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "AliCloud",
+              "DocumentMoniker": "D:\\UGit\\Abp_Employee\\AliCloud\\AliCloud.csproj",
+              "RelativeDocumentMoniker": "AliCloud\\AliCloud.csproj",
+              "ToolTip": "D:\\UGit\\Abp_Employee\\AliCloud\\AliCloud.csproj",
+              "RelativeToolTip": "AliCloud\\AliCloud.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-08-16T05:56:57.688Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "AliCloudSmsService.cs",
+              "DocumentMoniker": "D:\\UGit\\Abp_Employee\\AliCloud\\AliCloudSmsService.cs",
+              "RelativeDocumentMoniker": "AliCloud\\AliCloudSmsService.cs",
+              "ToolTip": "D:\\UGit\\Abp_Employee\\AliCloud\\AliCloudSmsService.cs",
+              "RelativeToolTip": "AliCloud\\AliCloudSmsService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-16T05:56:56.756Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "AliCloudModule.cs",
+              "DocumentMoniker": "D:\\UGit\\Abp_Employee\\AliCloud\\AliCloudModule.cs",
+              "RelativeDocumentMoniker": "AliCloud\\AliCloudModule.cs",
+              "ToolTip": "D:\\UGit\\Abp_Employee\\AliCloud\\AliCloudModule.cs",
+              "RelativeToolTip": "AliCloud\\AliCloudModule.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAKAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-16T05:56:55.272Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "IEmployeeGroupRepository.cs",
+              "DocumentMoniker": "D:\\UGit\\Abp_Employee\\CustomDomain\\IRepository\\IEmployeeGroupRepository.cs",
+              "RelativeDocumentMoniker": "CustomDomain\\IRepository\\IEmployeeGroupRepository.cs",
+              "ToolTip": "D:\\UGit\\Abp_Employee\\CustomDomain\\IRepository\\IEmployeeGroupRepository.cs",
+              "RelativeToolTip": "CustomDomain\\IRepository\\IEmployeeGroupRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAABRAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-16T05:52:32.535Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "CustomDomain.Shared",
+              "DocumentMoniker": "D:\\UGit\\Abp_Employee\\CustomDomain.Shared\\CustomDomain.Shared.csproj",
+              "RelativeDocumentMoniker": "CustomDomain.Shared\\CustomDomain.Shared.csproj",
+              "ToolTip": "D:\\UGit\\Abp_Employee\\CustomDomain.Shared\\CustomDomain.Shared.csproj",
+              "RelativeToolTip": "CustomDomain.Shared\\CustomDomain.Shared.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-08-16T05:46:52.135Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "ReturnOption.cs",
+              "DocumentMoniker": "D:\\UGit\\Abp_Employee\\CustomDomain.Shared\\Enums\\ReturnOption.cs",
+              "RelativeDocumentMoniker": "CustomDomain.Shared\\Enums\\ReturnOption.cs",
+              "ToolTip": "D:\\UGit\\Abp_Employee\\CustomDomain.Shared\\Enums\\ReturnOption.cs",
+              "RelativeToolTip": "CustomDomain.Shared\\Enums\\ReturnOption.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-16T05:47:43.23Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "RabbitRoutingKeyEnum.cs",
+              "DocumentMoniker": "D:\\UGit\\Abp_Employee\\CustomDomain.Shared\\Enums\\RabbitRoutingKeyEnum.cs",
+              "RelativeDocumentMoniker": "CustomDomain.Shared\\Enums\\RabbitRoutingKeyEnum.cs",
+              "ToolTip": "D:\\UGit\\Abp_Employee\\CustomDomain.Shared\\Enums\\RabbitRoutingKeyEnum.cs",
+              "RelativeToolTip": "CustomDomain.Shared\\Enums\\RabbitRoutingKeyEnum.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-16T05:47:30.802Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "RabbitExchangeEnum.cs",
+              "DocumentMoniker": "D:\\UGit\\Abp_Employee\\CustomDomain.Shared\\Enums\\RabbitExchangeEnum.cs",
+              "RelativeDocumentMoniker": "CustomDomain.Shared\\Enums\\RabbitExchangeEnum.cs",
+              "ToolTip": "D:\\UGit\\Abp_Employee\\CustomDomain.Shared\\Enums\\RabbitExchangeEnum.cs",
+              "RelativeToolTip": "CustomDomain.Shared\\Enums\\RabbitExchangeEnum.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-16T05:47:23.793Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "EmployeeStatus.cs",
+              "DocumentMoniker": "D:\\UGit\\Abp_Employee\\CustomDomain.Shared\\Enums\\EmployeeStatus.cs",
+              "RelativeDocumentMoniker": "CustomDomain.Shared\\Enums\\EmployeeStatus.cs",
+              "ToolTip": "D:\\UGit\\Abp_Employee\\CustomDomain.Shared\\Enums\\EmployeeStatus.cs",
+              "RelativeToolTip": "CustomDomain.Shared\\Enums\\EmployeeStatus.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-16T05:47:10.309Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "EnumStringAttribute.cs",
+              "DocumentMoniker": "D:\\UGit\\Abp_Employee\\CustomDomain.Shared\\Attributes\\EnumStringAttribute.cs",
+              "RelativeDocumentMoniker": "CustomDomain.Shared\\Attributes\\EnumStringAttribute.cs",
+              "ToolTip": "D:\\UGit\\Abp_Employee\\CustomDomain.Shared\\Attributes\\EnumStringAttribute.cs",
+              "RelativeToolTip": "CustomDomain.Shared\\Attributes\\EnumStringAttribute.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAEAAAAWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-16T05:46:55.306Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "CustomValidationExceptionHandler.cs",
+              "DocumentMoniker": "D:\\UGit\\Abp_Employee\\CustomApplication\\Exception\\CustomValidationExceptionHandler.cs",
+              "RelativeDocumentMoniker": "CustomApplication\\Exception\\CustomValidationExceptionHandler.cs",
+              "ToolTip": "D:\\UGit\\Abp_Employee\\CustomApplication\\Exception\\CustomValidationExceptionHandler.cs",
+              "RelativeToolTip": "CustomApplication\\Exception\\CustomValidationExceptionHandler.cs",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAewDIAAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-16T05:43:10.42Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
